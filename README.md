@@ -19,7 +19,19 @@ presence detection system.
 
 ## About
 
-Lorem ipsum
+This add-on is a server that subscribes to MQTT topics that the "Happy Bubbles"
+Bluetooth Beacon Presence Detectors publish to. It checks to see which of the
+detectors found the strongest signal for a particular beacon, and then lets
+you access that info either over an API, or a web interface.
+
+It is designed to be used as a home-automation presence detection system.
+If you install the detectors through-out a home and family members carry
+beacons around the house, you can program your home automation hubs to
+take certain actions depending on who entered or left certain rooms.
+
+This add-on also publishes changes in location to a particular topic.
+So you can program your hub to listen for these and make the desired changes
+as they happen, to not have to keep polling it.
 
 ## Installation
 
@@ -68,7 +80,16 @@ Example add-on configuration:
 
 ```json
 {
-  "log_level": "info"
+    "log_level": "info",
+    "ssl": false,
+    "certfile": "fullchain.pem",
+    "keyfile": "privkey.pem",
+    "ipv6": false,
+    "mqtt_host": "homeassistant",
+    "mqtt_port": 1883,
+    "mqtt_client_id": "happy_bubbles",
+    "mqtt_username": "happybubbles",
+    "mqtt_password": "dontworrybehappy"
 }
 ```
 
@@ -91,6 +112,54 @@ Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
+
+### Option: `ssl`
+
+Enables/Disables SSL (HTTPS) on the web interface.
+Set it `true` to enable it, `false` otherwise.
+
+### Option: `certfile`
+
+The certificate file to use for SSL.
+
+**Note**: _The file MUST be stored in `/ssl/`, which is the default for Hass.io_
+
+### Option: `keyfile`
+
+The private key file to use for SSL.
+
+**Note**: _The file MUST be stored in `/ssl/`, which is the default for Hass.io_
+
+### Option: `ipv6`
+
+Set this option to `false` to disable IPv6 support.
+
+### Option: `mqtt_host`
+
+The hostname or IP of the MQTT server to connect to.
+
+**Note**: _If you are using the core MQTT add-on, `homeassistant` should work
+out of the box_
+
+### Option: `mqtt_port`
+
+The port to connect to on the MQTT server, which normally is `1883`.
+
+### Option: `mqtt_client_id`
+
+The MQTT client ID of the Happy Bubbles presence server.
+
+### Option: `mqtt_username`
+
+The username to use when connecting to the MQTT server.
+
+**Note**: _Leave empty in case no username is needed_
+
+### Option: `mqtt_password`
+
+The password to use when connecting to the MQTT server.
+
+**Note**: _Leave empty in case no password is needed_
 
 ## Changelog & Releases
 
