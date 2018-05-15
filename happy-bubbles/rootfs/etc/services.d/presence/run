@@ -13,28 +13,28 @@ declare mqtt_port
 declare mqtt_username
 declare mqtt_password
 
-options+=(-http_host_path=0.0.0.0:3000)
+options+=("-http_host_path=0.0.0.0:3000")
 
 # Get MQTT client ID
 mqtt_client_id=$(hass.config.get 'mqtt_client_id')
-options+=(-mqtt_client_id="${mqtt_client_id}")
+options+=("-mqtt_client_id=${mqtt_client_id}")
 
 # Get MQTT Host
 mqtt_host=$(hass.config.get 'mqtt_host')
 mqtt_port=$(hass.config.get 'mqtt_port')
-options+=(-mqtt_host="${mqtt_host}:${mqtt_port}")
+options+=("-mqtt_host=${mqtt_host}:${mqtt_port}")
 
 # Set MQTT login (if needed)
 if hass.config.has_value 'mqtt_username'; then
     mqtt_username=$(hass.config.get 'mqtt_username')
-    options+=(-mqtt_username="${mqtt_username}")
+    options+=("-mqtt_username=${mqtt_username}")
 fi
 
 if hass.config.has_value 'mqtt_password'; then
     mqtt_password=$(hass.config.get 'mqtt_password')
-    options+=(-mqtt_password="${mqtt_password}")
+    options+=("-mqtt_password=${mqtt_password}")
 fi
 
 # RUN Happy Bubbles presence server
-cd /opt
+cd /opt || exit
 exec ./presence "${options[@]}"
