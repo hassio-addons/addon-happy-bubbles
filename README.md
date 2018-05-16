@@ -161,6 +161,23 @@ The password to use when connecting to the MQTT server.
 
 **Note**: _Leave empty in case no password is needed_
 
+## Embedding into Home Assistant
+
+It is possible to embed the Happy Bubbles interface directly into
+Home Assistant, allowing you to access it through the Home Assistant frontend.
+
+Home Assistant provides the `panel_iframe` component, for these purposes.
+
+Example configuration:
+
+```yaml
+panel_iframe:
+  happybubbles:
+    title: Happy Bubbles
+    icon: mdi:bluetooth
+    url: http://addres.to.your.hass.io:5555
+```
+
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
