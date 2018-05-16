@@ -31,8 +31,8 @@
     "mqtt_host": "homeassistant",
     "mqtt_port": 1883,
     "mqtt_client_id": "happy_bubbles",
-    "mqtt_username": "happybubbles",
-    "mqtt_password": "dontworrybehappy"
+    "mqtt_username": "",
+    "mqtt_password": ""
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
