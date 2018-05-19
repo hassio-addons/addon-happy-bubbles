@@ -10,10 +10,10 @@ if ! hass.file_exists '/data/presence.db'; then
     hass.log.debug 'Starting Presence temporarly...'
 
     cd /opt || exit
-    exec 3< <(./precense)
+    exec 3< <(./presence)
 
     # Wait until the db exists
-    until hass.file_exists "/opt/precense.db"; do
+    until hass.file_exists "/opt/presence.db"; do
         sleep 1
     done
 
@@ -21,12 +21,12 @@ if ! hass.file_exists '/data/presence.db'; then
     sleep 2
 
     # Kill it, if still alive
-    kill "$(pgrep precense)" >/dev/null 2>&1 || true
+    kill "$(pgrep presence)" >/dev/null 2>&1 || true
 
     # Move the created database into a safe place
-    mv /opt/precense.db /data/precense.db
+    mv /opt/presence.db /data/presence.db
 
-    hass.log.debug 'Persistent precense database created'
+    hass.log.debug 'Persistent presence.db database created'
 fi
 
-ln -s /data/precense.db /opt/precense.db
+ln -s /data/presence.db /opt/presence.db
