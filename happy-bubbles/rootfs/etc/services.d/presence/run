@@ -14,6 +14,7 @@ declare mqtt_username
 declare mqtt_password
 
 options+=("-http_host_path=0.0.0.0:3000")
+options+=("-db_file=/data/presence.db")
 
 # Get MQTT client ID
 mqtt_client_id=$(hass.config.get 'mqtt_client_id')
