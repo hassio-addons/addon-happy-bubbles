@@ -18,7 +18,7 @@ RUN \
     && if [[ "${BUILD_ARCH}" = "armhf" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
     \
-    && wget "https://github.com/happy-bubbles/presence/releases/download/1.8.1/presence_linux_${ARCH}.zip" \
+    && wget "https://github.com/happy-bubbles/presence/releases/download/1.8.2/presence_linux_${ARCH}.zip" \
     \
     && mkdir /opt \
     && unzip -d /opt "presence_linux_${ARCH}.zip" \
