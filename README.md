@@ -137,7 +137,7 @@ Set this option to `false` to disable IPv6 support.
 The hostname or IP of the MQTT server to connect to.
 
 **Note**: _If you are using the core MQTT add-on, `homeassistant` should work
-out of the box_
+out of the box._
 
 ### Option: `mqtt_port`
 
@@ -200,10 +200,11 @@ Got questions?
 
 You have several options to get them answered:
 
-- The Community Hass.io Add-ons [Discord Chat server][discord] for add-on
+- The [Community Hass.io Add-ons Discord chat server][discord] for add-on
   support and feature requests.
-- The Home Assistant [Discord Chat Server][discord-ha] for general Home
+- The [Home Assistant Discord chat server][discord-ha] for general Home
   Assistant discussions and questions.
+- The Home Assistant [Community Forum][forum].
 - Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
 
 You could also [open an issue here][issue] GitHub.
