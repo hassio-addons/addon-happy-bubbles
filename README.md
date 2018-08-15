@@ -153,14 +153,12 @@ The MQTT client ID of the Happy Bubbles presence server.
 
 The username to use when connecting to the MQTT server.
 
-**Note**: _Leave empty in case no username is needed._  
 **Note**: _This option support secrets, e.g., `!secret mqtt_username`._
 
 ### Option: `mqtt_password`
 
 The password to use when connecting to the MQTT server.
 
-**Note**: _Leave empty in case no password is needed._  
 **Note**: _This option support secrets, e.g., `!secret mqtt_password`._
 
 ## Embedding into Home Assistant
