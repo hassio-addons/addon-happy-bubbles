@@ -17,6 +17,7 @@
   "homeassistant_api": false,
   "host_network": false,
   "map": [
+    "config",
     "ssl"
   ],
   "ports": {
