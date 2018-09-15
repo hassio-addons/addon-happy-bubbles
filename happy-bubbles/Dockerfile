@@ -14,7 +14,7 @@ RUN \
         wget=1.19.5-r0 \
     \
     && apk add --no-cache \
-        nginx=1.14.0-r0 \
+        nginx=1.14.0-r1 \
     \
     && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="386"; fi \
