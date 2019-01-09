@@ -11,7 +11,7 @@ ARG BUILD_ARCH=amd64
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         unzip=6.0-r4 \
-        wget=1.19.5-r0 \
+        wget=1.20.1-r0 \
     \
     && apk add --no-cache \
         nginx=1.14.2-r0 \
