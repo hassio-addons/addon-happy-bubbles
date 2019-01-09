@@ -254,24 +254,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[aarch64-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[aarch64-anchore]: http://example.com
 [aarch64-arch-shield]: https://img.shields.io/badge/architecture-aarch64-blue.svg
 [aarch64-dockerhub]: https://hub.docker.com/r/hassioaddons/happy-bubbles-aarch64
 [aarch64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/happy-bubbles-aarch64.svg
 [aarch64-microbadger]: https://microbadger.com/images/hassioaddons/happy-bubbles-aarch64
 [aarch64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/happy-bubbles-aarch64.svg
 [aarch64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/happy-bubbles-aarch64.svg
-[amd64-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[amd64-anchore]: https://anchore.io/image/dockerhub/hassioaddons%happy-bubbles-amd64%3Alatest
 [amd64-arch-shield]: https://img.shields.io/badge/architecture-amd64-blue.svg
 [amd64-dockerhub]: https://hub.docker.com/r/hassioaddons/happy-bubbles-amd64
 [amd64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/happy-bubbles-amd64.svg
 [amd64-microbadger]: https://microbadger.com/images/hassioaddons/happy-bubbles-amd64
 [amd64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/happy-bubbles-amd64.svg
 [amd64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/happy-bubbles-amd64.svg
-[armhf-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[armhf-anchore]: https://anchore.io/image/dockerhub/hassioaddons%happy-bubbles-armhf%3Alatest
 [armhf-arch-shield]: https://img.shields.io/badge/architecture-armhf-blue.svg
 [armhf-dockerhub]: https://hub.docker.com/r/hassioaddons/happy-bubbles-armhf
 [armhf-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/happy-bubbles-armhf.svg
@@ -292,8 +286,6 @@ SOFTWARE.
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-happy-bubbles/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-happy-bubbles/pipelines
 [home-assistant]: https://home-assistant.io
-[i386-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[i386-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fhappy-bubbles-i386%3Alatest
 [i386-arch-shield]: https://img.shields.io/badge/architecture-i386-blue.svg
 [i386-dockerhub]: https://hub.docker.com/r/hassioaddons/happy-bubbles-i386
 [i386-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/happy-bubbles-i386.svg
