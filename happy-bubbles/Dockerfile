@@ -19,6 +19,7 @@ RUN \
     && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="386"; fi \
     && if [[ "${BUILD_ARCH}" = "armhf" ]]; then ARCH="arm"; fi \
+    && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
     \
     && wget "https://github.com/happy-bubbles/presence/releases/download/1.8.3/presence_linux_${ARCH}.zip" \
