@@ -25,7 +25,6 @@
     "5555/tcp": 5555
   },
   "options": {
-    "log_level": "info",
     "ssl": true,
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
@@ -37,7 +36,7 @@
     "mqtt_password": ""
   },
   "schema": {
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
