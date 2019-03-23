@@ -46,8 +46,5 @@
     "mqtt_client_id": "str",
     "mqtt_username": "str",
     "mqtt_password": "str"
-  },
-  "environment": {
-    "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
   }
 }
