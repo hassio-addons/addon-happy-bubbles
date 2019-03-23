@@ -23,7 +23,6 @@ RUN \
     \
     && wget "https://github.com/happy-bubbles/presence/releases/download/1.8.3/presence_linux_${ARCH}.zip" \
     \
-    && mkdir /opt \
     && unzip -d /opt "presence_linux_${ARCH}.zip" \
     \
     && rm "presence_linux_${ARCH}.zip" \
