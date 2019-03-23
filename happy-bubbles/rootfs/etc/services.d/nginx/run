@@ -3,8 +3,12 @@
 # Community Hass.io Add-ons: Happy Bubbles
 # Runs the Nginx daemon
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
+# Wait for the presence server to become available
+s6-svwait -u -t 5000 /var/run/s6/services/presence
+timeout -t 15 \
+    bash -c \
+        'until echo > /dev/tcp/localhost/3000; do sleep 0.5; done' \
+            > /dev/null 2>&1
 
 bashio::log.info "Starting NGinx..."
 exec nginx -g "daemon off;"
