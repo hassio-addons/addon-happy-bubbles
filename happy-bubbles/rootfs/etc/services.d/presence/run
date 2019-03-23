@@ -1,11 +1,8 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Happy Bubbles
 # Runs the Happy Bubbles presence server
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
-
 declare -a options
 declare mqtt_client_id
 declare mqtt_host
@@ -13,26 +10,28 @@ declare mqtt_port
 declare mqtt_username
 declare mqtt_password
 
+bashio::log.info "Starting Happy Bubbles Presence server..."
+
 options+=("-http_host_path=0.0.0.0:3000")
 options+=("-db_file=/data/presence.db")
 
 # Get MQTT client ID
-mqtt_client_id=$(hass.config.get 'mqtt_client_id')
+mqtt_client_id=$(bashio::config 'mqtt_client_id')
 options+=("-mqtt_client_id=${mqtt_client_id}")
 
 # Get MQTT Host
-mqtt_host=$(hass.config.get 'mqtt_host')
-mqtt_port=$(hass.config.get 'mqtt_port')
+mqtt_port=$(bashio::config 'mqtt_port')
+mqtt_host=$(bashio::config 'mqtt_host')
 options+=("-mqtt_host=${mqtt_host}:${mqtt_port}")
 
 # Set MQTT login (if needed)
-if hass.config.has_value 'mqtt_username'; then
-    mqtt_username=$(hass.config.get 'mqtt_username')
+if bashio::config.has_value 'mqtt_username'; then
+    mqtt_username=$(bashio::config 'mqtt_username')
     options+=("-mqtt_username=${mqtt_username}")
 fi
 
-if hass.config.has_value 'mqtt_password'; then
-    mqtt_password=$(hass.config.get 'mqtt_password')
+if bashio::config.has_value 'mqtt_password'; then
+    mqtt_password=$(bashio::config 'mqtt_password')
     options+=("-mqtt_password=${mqtt_password}")
 fi
 
