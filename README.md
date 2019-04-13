@@ -98,6 +98,9 @@ you are troubleshooting.
 Enables/Disables SSL (HTTPS) on the web interface.
 Set it `true` to enable it, `false` otherwise.
 
+**Note**: _The SSL settings only apply to direct access and has no effect
+on the Hass.io Ingress service._
+
 ### Option: `certfile`
 
 The certificate file to use for SSL.
