@@ -14,6 +14,8 @@ RUN \
         wget=1.20.3-r0 \
     \
     && apk add --no-cache \
+        lua-resty-http=0.12-r1 \
+        nginx-mod-http-lua=1.14.2-r0 \
         nginx=1.14.2-r0 \
     \
     && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm"; fi \
@@ -23,11 +25,12 @@ RUN \
     && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
     \
     && wget "https://github.com/happy-bubbles/presence/releases/download/1.8.3/presence_linux_${ARCH}.zip" \
-    \
     && unzip -d /opt "presence_linux_${ARCH}.zip" \
-    \
     && rm "presence_linux_${ARCH}.zip" \
-    && apk del --purge .build-dependencies
+    \
+    && apk del --purge .build-dependencies \
+    && rm -fr \
+        /etc/nginx
 
  # Copy root filesystem
 COPY rootfs /

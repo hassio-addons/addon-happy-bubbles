@@ -12,7 +12,7 @@ declare mqtt_password
 
 bashio::log.info "Starting Happy Bubbles Presence server..."
 
-options+=("-http_host_path=0.0.0.0:3000")
+options+=("-http_host_path=127.0.0.1:3000")
 options+=("-db_file=/data/presence.db")
 
 # Get MQTT client ID
