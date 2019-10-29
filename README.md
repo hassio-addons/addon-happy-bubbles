@@ -147,7 +147,7 @@ The password to use when connecting to the MQTT server.
 It is possible to embed the Happy Bubbles interface directly into
 Home Assistant, allowing you to access it through the Home Assistant frontend.
 
-Home Assistant provides the `panel_iframe` component, for these purposes.
+Home Assistant provides the `panel_iframe` integration, for these purposes.
 
 Example configuration:
 
