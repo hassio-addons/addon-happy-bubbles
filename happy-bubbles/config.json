@@ -22,7 +22,6 @@
   "hassio_role": "default",
   "auth_api": true,
   "map": [
-    "config",
     "ssl"
   ],
   "ports": {
