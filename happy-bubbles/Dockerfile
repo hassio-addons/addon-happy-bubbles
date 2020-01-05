@@ -15,8 +15,8 @@ RUN \
     \
     && apk add --no-cache \
         lua-resty-http=0.15-r0 \
-        nginx-mod-http-lua=1.16.1-r1 \
-        nginx=1.16.1-r1 \
+        nginx-mod-http-lua=1.16.1-r4 \
+        nginx=1.16.1-r4 \
     \
     && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="386"; fi \
