@@ -15,8 +15,8 @@ RUN \
     \
     && apk add --no-cache \
         lua-resty-http=0.15-r0 \
-        nginx-mod-http-lua=1.16.1-r4 \
-        nginx=1.16.1-r4 \
+        nginx-mod-http-lua=1.16.1-r6 \
+        nginx=1.16.1-r6 \
     \
     && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="386"; fi \
@@ -28,7 +28,7 @@ RUN \
     && unzip -d /opt "presence_linux_${ARCH}.zip" \
     && rm "presence_linux_${ARCH}.zip" \
     \
-    && apk del --purge .build-dependencies \
+    && apk del --no-cache --purge .build-dependencies \
     && rm -fr \
         /etc/nginx
 
