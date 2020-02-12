@@ -56,18 +56,17 @@ comparison to installing any other Hass.io add-on.
 
 Example add-on configuration:
 
-```json
-{
-    "log_level": "info",
-    "ssl": false,
-    "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem",
-    "mqtt_host": "homeassistant",
-    "mqtt_port": 1883,
-    "mqtt_client_id": "happy_bubbles",
-    "mqtt_username": "happybubbles",
-    "mqtt_password": "dontworrybehappy"
-}
+```yaml
+log_level: info
+ssl: false
+certfile: fullchain.pem
+keyfile: privkey.pem
+mqtt_host: homeassistant
+mqtt_port: 1883
+mqtt_client_id: happy_bubbles
+mqtt_username: happybubbles
+mqtt_password: dontworrybehappy
+
 ```
 
 **Note**: _This is just an example, don't copy and past it! Create your own!_
