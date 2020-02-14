@@ -1,6 +1,6 @@
 #!/usr/bin/execlineb -S0
 # ==============================================================================
-# Community Hass.io Add-ons: Happy Bubbles
+# Home Assistant Community Add-on: Happy Bubbles
 # Take down the S6 supervision tree when presence fails
 # ==============================================================================
 if { s6-test ${1} -ne 0 }

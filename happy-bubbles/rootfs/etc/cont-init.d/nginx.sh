@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: Happy Bubbles
+# Home Assistant Community Add-on: Happy Bubbles
 # Configures NGINX
 # ==============================================================================
 declare port

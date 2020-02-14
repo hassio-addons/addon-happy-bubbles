@@ -10,25 +10,17 @@
   "panel_icon": "mdi:chart-bubble",
   "startup": "services",
   "homeassistant": "0.92.0b2",
-  "arch": [
-    "aarch64",
-    "amd64",
-    "armv7",
-    "armhf",
-    "i386"
-  ],
+  "arch": ["aarch64", "amd64", "armv7", "armhf", "i386"],
   "boot": "auto",
   "hassio_api": true,
   "hassio_role": "default",
   "auth_api": true,
-  "map": [
-    "ssl"
-  ],
+  "map": ["ssl"],
   "ports": {
     "80/tcp": null
   },
   "ports_description": {
-    "80/tcp": "Web interface (Not required for Hass.io Ingress)"
+    "80/tcp": "Web interface (Not required for Ingress)"
   },
   "options": {
     "ssl": true,

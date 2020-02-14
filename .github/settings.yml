@@ -1,8 +1,8 @@
 ---
 repository:
-  description: "Happy Bubbles - Community Hass.io Add-on for Home Assistant"
+  description: "Happy Bubbles - Home Assistant Community Add-ons"
   homepage: https://addons.community
-  topics: happy-bubbles, presence-detection, hassio-addons, hassio, hass, home-assistant
+  topics: happy-bubbles, presence-detection, addon, addons, homeassistant, home-assistant
   private: false
   has_issues: true
   has_projects: false
