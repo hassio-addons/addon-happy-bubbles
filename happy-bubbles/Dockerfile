@@ -10,7 +10,7 @@ ARG BUILD_ARCH=amd64
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        unzip=6.0-r4 \
+        unzip=6.0-r6 \
         wget=1.20.3-r0 \
     \
     && apk add --no-cache \
