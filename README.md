@@ -40,134 +40,7 @@ This add-on also publishes changes in location to a particular topic.
 So you can program your hub to listen for these and make the desired changes
 as they happen, to not have to keep polling it.
 
-## Installation
-
-The installation of this add-on is pretty straightforward and not different in
-comparison to installing any other Home Assistant add-on.
-
-1. Search for the “Happy Bubbles” add-on in the Hass.io 166 add-on store
-   and install it.
-1. Start the "Happy Bubbles" add-on
-1. Check the logs of the "Happy Bubbles" add-on to see if everything went well.
-
-## Configuration
-
-**Note**: _Remember to restart the add-on when the configuration is changed._
-
-Example add-on configuration:
-
-```yaml
-log_level: info
-ssl: false
-certfile: fullchain.pem
-keyfile: privkey.pem
-mqtt_host: homeassistant
-mqtt_port: 1883
-mqtt_client_id: happy_bubbles
-mqtt_username: happybubbles
-mqtt_password: dontworrybehappy
-
-```
-
-**Note**: _This is just an example, don't copy and past it! Create your own!_
-
-### Option: `log_level`
-
-The `log_level` option controls the level of log output by the addon and can
-be changed to be more or less verbose, which might be useful when you are
-dealing with an unknown issue. Possible values are:
-
-- `trace`: Show every detail, like all called internal functions.
-- `debug`: Shows detailed debug information.
-- `info`: Normal (usually) interesting events.
-- `warning`: Exceptional occurrences that are not errors.
-- `error`:  Runtime errors that do not require immediate action.
-- `fatal`: Something went terribly wrong. Add-on becomes unusable.
-
-Please note that each level automatically includes log messages from a
-more severe level, e.g., `debug` also shows `info` messages. By default,
-the `log_level` is set to `info`, which is the recommended setting unless
-you are troubleshooting.
-
-### Option: `ssl`
-
-Enables/Disables SSL (HTTPS) on the web interface.
-Set it `true` to enable it, `false` otherwise.
-
-**Note**: _The SSL settings only apply to direct access and has no effect
-on the Ingress service._
-
-### Option: `certfile`
-
-The certificate file to use for SSL.
-
-**Note**: _The file MUST be stored in `/ssl/`, which is the default_
-
-### Option: `keyfile`
-
-The private key file to use for SSL.
-
-**Note**: _The file MUST be stored in `/ssl/`, which is the default_
-
-### Option: `mqtt_host`
-
-The hostname or IP of the MQTT server to connect to.
-
-**Note**: _If you are using the core MQTT add-on, `homeassistant` should work
-out of the box._
-
-### Option: `mqtt_port`
-
-The port to connect to on the MQTT server, which normally is `1883`.
-
-### Option: `mqtt_client_id`
-
-The MQTT client ID of the Happy Bubbles presence server.
-
-**Note**: _This option support secrets, e.g., `!secret client_id`._
-
-### Option: `mqtt_username`
-
-The username to use when connecting to the MQTT server.
-
-**Note**: _This option support secrets, e.g., `!secret mqtt_username`._
-
-### Option: `mqtt_password`
-
-The password to use when connecting to the MQTT server.
-
-**Note**: _This option support secrets, e.g., `!secret mqtt_password`._
-
-## Embedding into Home Assistant
-
-It is possible to embed the Happy Bubbles interface directly into
-Home Assistant, allowing you to access it through the Home Assistant frontend.
-
-Home Assistant provides the `panel_iframe` integration, for these purposes.
-
-Example configuration:
-
-```yaml
-panel_iframe:
-  happybubbles:
-    title: Happy Bubbles
-    icon: mdi:bluetooth
-    url: http://addres.to.your.hass.io:5555
-```
-
-## Changelog & Releases
-
-This repository keeps a change log using [GitHub's releases][releases]
-functionality. The format of the log is based on
-[Keep a Changelog][keepchangelog].
-
-Releases are based on [Semantic Versioning][semver], and use the format
-of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
-based on the following:
-
-- ``MAJOR``: Incompatible or major changes.
-- ``MINOR``: Backwards-compatible new features and enhancements.
-- ``PATCH``: Backwards-compatible bugfixes and package updates.
+[:books: Read the full add-on documentation][docs]
 
 ## Support
 
@@ -242,6 +115,7 @@ SOFTWARE.
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
+[docs]: https://github.com/hassio-addons/addon-happy-bubbles/blob/master/happy-bubbles/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-happy-bubbles/53511?u=frenck
 [frenck]: https://github.com/frenck
@@ -249,10 +123,8 @@ SOFTWARE.
 [github-sponsors]: https://github.com/sponsors/frenck
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-happy-bubbles/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-happy-bubbles/pipelines
-[home-assistant]: https://home-assistant.io
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-happy-bubbles/issues
-[keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-happy-bubbles.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
@@ -262,4 +134,3 @@ SOFTWARE.
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-happy-bubbles.svg
 [releases]: https://github.com/hassio-addons/addon-happy-bubbles/releases
 [repository]: https://github.com/hassio-addons/repository
-[semver]: http://semver.org/spec/v2.0.0.htm
