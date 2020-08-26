@@ -11,7 +11,7 @@ ARG BUILD_ARCH=amd64
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         unzip=6.0-r7 \
-        wget=1.20.3-r0 \
+        wget=1.20.3-r1 \
     \
     && apk add --no-cache \
         lua-resty-http=0.15-r0 \
